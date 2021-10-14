@@ -4,84 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Template</title>
-    <!-- Render All Elements Normally -->
+    <title>Book-Shelf</title>
+    <!-- Render All Elements Normally
+    ----------------------------------------------->
     <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Font Awesome Library -->
+
+    <!-- Font Awesome Library
+    ----------------------------------------------->
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- Main Template CSS File -->
+
+    <!-- Main Template CSS File 
+    ----------------------------------------------->
     <link rel="stylesheet" href="css/Main.css" />
+
+    <!-- Google Fonts
+      ------------------------------------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="project">
-      <!-- start header
-    ------------------------ -->
-      <header>
-        <nav>
-          <ul>
-            <li><a href="">Gmail</a></li>
-            <li><a href="">Images</a></li>
-            <li><i class="fas fa-braille"></i></li>
-            <li><img src="./Images/skills-01.jpg" alt="my photo" /></li>
-          </ul>
-        </nav>
-      </header>
-      <!-- end header
-    ------------------------ -->
+    <div class="book-shelf">
       <div class="container">
-        <!-- start main
-    ------------------------ -->
         <main>
-          <div class="logo">
-            <img src="./Images/google.png " alt="google logo" />
-          </div>
+          <!-- adding books
+            -------------------------------------- -->
+          <button class="add-button">Add button</button>
+          <div class="window">
+            <form action="" class="add-book">
+              <p class="error">Please fill the fields!!</p>
+              <!-- 
+                Close add book window
+               --------------------------------------->
+              <input class="close" type="button" value="×" />
+              <!-- 
+                adding books fields
+               --------------------------------------->
+              <input
+                type="text"
+                id="title"
+                placeholder="title"
+                required
+                class="input"
+              />
 
-          <div class="search-bar">
-            <i class="fas fa-search"></i>
-            <input
-              placeholder="search Google or type a URL"
-              type="text"
-              name=""
-              id=""
-            />
-            <i class="fas fa-microphone"></i>
-          </div>
+              <input
+                type="text"
+                id="author"
+                placeholder="author"
+                required
+                class="input"
+              />
 
-          <div class="buttons">
-            <button>Google Search</button>
-            <button>I'm feeling lucky</button>
-          </div>
+              <input
+                type="url"
+                id="link"
+                placeholder="link"
+                required
+                class="input"
+              />
 
-          <p>
-            Google offered in:
-            <span dir="rtl"><a dir="rtl" href="#">العربية</a></span>
-          </p>
+              <input type="reset" value="Clear" class="input" />
+              <input type="submit" value="Add Book" class="input" />
+            </form>
+          </div>
         </main>
-        <!-- end main
-    ------------------------ -->
       </div>
-      <!-- start footer
-    ------------------------ -->
-      <footer>
-        <div class="one">
-          <ul>
-            <li>About</li>
-            <li>Advertising</li>
-            <li>Business</li>
-            <li>how search works</li>
-          </ul>
-        </div>
-
-        <div class="two">
-          <ul>
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>Settings</li>
-          </ul>
-        </div>
-      </footer>
-      <!-- end footer
-    ------------------------ -->
     </div>
+    <script src="main.js" type="module"></script>
+    <script src="MyLibrary.js" type="module"></script>
   </body>
 </html>

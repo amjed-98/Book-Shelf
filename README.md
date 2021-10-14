@@ -1,2 +1,2 @@
-# Book-shelf
-book shelf with add new book button
+# Book-Shelf
+Book shelf with an add button to add new books
