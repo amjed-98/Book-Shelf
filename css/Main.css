@@ -1,0 +1,194 @@
+/* Start Variables */
+:root {
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul {
+  list-style: none;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* start project 
+********************** */
+a {
+  text-decoration: none;
+}
+
+/* start header 
+********************** */
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li {
+  padding: 1em;
+}
+nav a {
+  color: black;
+}
+nav li:hover a {
+  text-decoration: underline;
+}
+nav li:hover i {
+  box-shadow: 0 0 15px 0 #777;
+}
+
+nav img {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+}
+nav img:hover {
+  box-shadow: 0 0 15px 0 #777;
+}
+/* End header 
+********************** */
+/* start main 
+********************** */
+main {
+  padding-top: 1.5em;
+  display: grid;
+  place-items: center;
+}
+main .logo {
+  overflow: hidden;
+}
+.search-bar {
+  position: relative;
+  width: 50%;
+  margin: 1em 0 3em;
+}
+
+.search-bar input {
+  border: 1px solid black;
+  border-radius: 30px 30px;
+  width: 100%;
+  height: 1em;
+  padding: 1.3em 1.3em 1.3em 3.4em;
+}
+.search-bar input:hover {
+  background-color: #eeeeee;
+}
+.search-bar i {
+  color: rgb(105, 105, 105);
+  position: absolute;
+}
+.search-bar i:first-of-type {
+  left: 4%;
+  top: 35%;
+  color: #777;
+}
+.search-bar i:last-of-type {
+  right: 4%;
+  top: 35%;
+  color: blue;
+}
+
+/* End main 
+********************** */
+/* start buttons
+********************** */
+.buttons button {
+  cursor: pointer;
+  border: 1px solid #f2f2f2;
+  padding: 0.4em 1em;
+  color: rgb(59, 59, 59);
+  border-radius: 3px;
+  background-color: #f2f2f2;
+}
+.buttons button:first-child {
+  margin-right: 1em;
+}
+.buttons button:hover {
+  outline: 1px solid #aaa;
+}
+/* End buttons 
+********************** */
+
+/* start footer
+********************** */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eeeeee;
+}
+footer ul {
+  display: flex;
+  cursor: pointer;
+}
+footer ul li:hover {
+  text-decoration: underline;
+}
+footer .one ul li {
+  margin-left: 1em;
+}
+footer .two ul li {
+  margin-right: 2em;
+}
+/* end footer
+********************** */
+/* End project 
+********************** */
+
+@media (max-width: 670px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-bar {
+    width: 100%;
+  }
+}
