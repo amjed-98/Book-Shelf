@@ -77,7 +77,7 @@ for (let b of books) {
   main.append(bookContainer);
 }
 
-/* adding new books
+/*
  **************************************** */
 const window = select(".window");
 const author = select("#author");
@@ -88,11 +88,14 @@ const addBtn = select('input[value="Add Book"]');
 const close = select(".close");
 const error = select(".error");
 
+/* show add book window
+ **************************************** */
 function showWindow() {
   window.classList.add("active");
   bookContainer.classList.add("active");
 }
-
+/* hide add book window
+ **************************************** */
 function closeWindow() {
   window.classList.remove("active");
   bookContainer.classList.remove("active");
@@ -126,6 +129,7 @@ function addBook(e) {
       bookContainer.append(book);
       main.append(bookContainer);
     }
+    console.log(link.value.includes("http"));
   }
 }
 
