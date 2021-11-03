@@ -27,53 +27,54 @@
     />
   </head>
   <body>
-    <div class="book-shelf">
-      <div class="container">
-        <main>
-          <!-- adding books
-            -------------------------------------- -->
-          <button class="add-button">Add button</button>
-          <div class="window">
-            <form action="" class="add-book">
-              <p class="error">Please fill the fields!!</p>
-              <!-- 
-                Close add book window
-               --------------------------------------->
-              <input class="close" type="button" value="×" />
-              <!-- 
-                adding books fields
-               --------------------------------------->
-              <input
-                type="text"
-                id="title"
-                placeholder="title"
-                required
-                class="input"
-              />
-
-              <input
-                type="text"
-                id="author"
-                placeholder="author"
-                required
-                class="input"
-              />
-
-              <input
-                type="url"
-                id="link"
-                placeholder="link"
-                required
-                class="input"
-              />
-
-              <input type="reset" value="Clear" class="input" />
-              <input type="submit" value="Add Book" class="input" />
-            </form>
-          </div>
-        </main>
+    <main>
+    <div class="container">
+      <!-- Start Book
+          ---------------------- -->
+      <div class="book-shelf">
+        
       </div>
-    </div>
+      <!-- End Book
+          ---------------------- -->
+
+      <!-- Start Add Book
+          ---------------------- -->
+          
+          <button class="upload-btn">Upload a book</button>
+
+          <form action=""  >
+
+            <div class="Msgs">
+              <div  class="success">your book has been added!</div>
+              <div  class="error">please enter a valid URL</div>
+            </div>
+            
+            <div class="inputField">
+              <label for="title">Title:</label>
+              <input type="text" name="title" id="title" required>
+            </div>
+
+            <br>
+
+            <div class="inputField">
+              <label for="author">Author:</label>
+              <input type="text" name="author" id="author" required>
+            </div>
+
+              <br>
+
+              <div class="inputField">
+                <label for="url">URL:</label>
+                <input type="url" name="url" id="url" required>
+              </div>
+            <br>
+            <input type="submit" value="Add" required>
+            
+          </form>
+      <!-- End Add Book
+          ---------------------- -->
+      </div>
+    </main>
     <script src="main.js" type="module"></script>
     <script src="MyLibrary.js" type="module"></script>
   </body>
