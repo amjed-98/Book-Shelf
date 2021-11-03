@@ -1,11 +1,3 @@
-/* Start Variables
-************************************/
-:root {
-  --shelfColor: #08393d;
-}
-/* End Variables
-************************************/
-
 /* Start Global Rules
 ************************************/
 * {
@@ -16,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%; /* font-size = 10px */
 }
 
 body {
@@ -68,34 +61,41 @@ ul {
 /* Start Book Shelf
 ************************************/
 
-.bookContainer {
-  padding: 6.5em 0;
+.book-shelf {
+  padding: 6.5em;
   border-radius: 4px;
   position: relative;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
-  gap: 5em 2em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5rem;
 }
-/* start book
-***************************************** */
+
 .book {
-  z-index: 3;
-  box-shadow: 0px 15px 0 0px var(--shelfColor);
-  border-radius: 20px;
-  padding: 1em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  border-bottom: #d7711e solid 0.9rem;
+  box-shadow: 0px 20px 20px 0;
+  border-radius: 1rem;
+  padding: 2rem;
 }
-span.title {
+
+.title {
   color: burlywood;
   text-transform: capitalize;
   font-size: 18px;
   display: block;
   transform: translateY(6px);
   letter-spacing: 2px;
+  margin-top: 1.5rem;
+  font-size: 2.6rem;
 }
-span.author {
+
+.author {
   letter-spacing: 2px;
   padding-top: 10px;
   color: white;
@@ -103,94 +103,104 @@ span.author {
   font-style: italic;
   display: block;
   transform: translateY(6px);
+  margin-top: 0.5rem;
+  font-size: 2.1rem;
 }
 
 .book img {
-  transition: 0.2s;
+  transition: 0.5s;
   position: relative;
-  width: 4em;
+  width: 8rem;
 }
 .book:hover img {
   transform-origin: center;
-  transform: scale(2) rotatey(360deg);
+  transform: scale(2);
   z-index: 10;
 }
 
 /* End book
 ***************************************** */
 
-/* start add new book form
+/* Start Add book
 ***************************************** */
-.add-button {
+.upload-btn {
+  font-size: 2.5rem;
   position: fixed;
-  right: 0%;
-  top: 10%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  cursor: pointer;
-  padding: 0.5em;
+  right: 5rem;
+  padding: 1rem;
+  background: #d7711e;
   color: white;
-  background-color: green;
-  border: none;
-}
-
-form.add-book {
-  position: relative;
-}
-
-.close {
-  position: fixed;
-  right: -7px;
-  top: 19px;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  color: white;
+  bottom: 7rem;
   font-weight: bold;
-  font-size: 2.1em;
+  border: none;
+  border-bottom: #833a00 solid 0.8rem;
+  cursor: pointer;
+  z-index: 99;
 }
 
-.window {
-  position: fixed;
-  top: 50%;
+form {
+  background: #161413;
+  border-radius: 0.8rem;
+  font-size: 3rem;
+  position: absolute;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  display: none;
-}
-
-.window.active {
-  display: block;
-  z-index: 6;
-}
-
-.bookContainer.active {
-  opacity: 0.4;
-}
-
-.add-book {
-  padding: 1em;
-  border-radius: 1em;
+  color: white;
   display: flex;
   flex-direction: column;
-  background-color: var(--shelfColor);
+  padding: 6rem 2.5rem;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: -44;
 }
 
-.input {
-  border-radius: 6px;
-  padding: 0.7em 1em;
-  width: 15em;
-  margin: 1em;
+form.active {
+  opacity: 1;
+  z-index: 999;
+  transition: 0.5s;
 }
 
-.error {
-  color: red;
-  text-align: center;
-  text-transform: capitalize;
+.inputField {
+  width: 35rem;
+  display: flex;
   font-weight: bold;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+}
+.inputField input {
+  padding: 0.5rem 1rem;
+  caret-color: #833a00;
+  outline: none;
+}
+form input[type="submit"] {
+  font-weight: bold;
+  color: #833a00;
+  cursor: pointer;
+  transition: 0.2s;
+}
+form input[type="submit"]:hover {
+  color: #d7711e;
+}
+/* End Add book
+***************************************** */
+/* Msgs */
+.error {
   display: none;
+  color: red;
+  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
+  transform: translateY(-3rem);
 }
 
-/* start add new book form
-***************************************** */
+.success {
+  color: burlywood;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: none;
+  font-size: 2.5rem;
+  text-align: center;
+  transform: translateY(-3rem);
+}
